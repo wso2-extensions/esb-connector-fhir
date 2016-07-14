@@ -12,15 +12,20 @@ Pre-requisites:
 Tested Platform:
 
  - Microsoft WINDOWS V-7
- - UBUNTU 13.04
- - WSO2 ESB 4.9.0
+ - UBUNTU 13.04,14.04
+ - WSO2 ESB 4.9.0,5.0.0-BETA
  - Java 1.7
 
 Steps to follow in setting integration test.
 
- 1. Download ESB WSO2 ESB 4.9.0 by navigating the following the URL: http://wso2.com/products/enterprise-service-bus/.
+ 1. Download ESB WSO2 ESB 5.0.0-BETA and add "-XX:-UseSplitVerifier" under $JVM_MEM_OPTS into {ESB_HOME}/bin/wso2server.sh".
 
- 2. Go to FHIR root URL and then  Extract the certificate from browser and place the certificate file in following
+ 2. This ESB should be configured as below;
+    i) Enable following message formatters
+         <messageFormatter contentType="text/html"
+            class="org.wso2.carbon.relay.ExpandingMessageFormatter"/>
+
+ 3. Go to FHIR root URL(https://open-api.fhir.me) and then  Extract the certificate from browser and place the certificate file in following
     locations.
 
    i)  "<FHIR_CONNECTOR_HOME>/fhir-connector/fhir-connector-1.0.0/org wso2.carbon.connector/src/test/resources/
@@ -41,9 +46,9 @@ Steps to follow in setting integration test.
        Remove the copied certificate.
 
 
- 3. Compress modified ESB as wso2esb-4.9.0.zip and copy that zip file into location "{ESB_CONNECTOR_HOME}/repository/".
+ 4. Compress modified ESB as wso2esb-4.9.0.zip/wso2esb-5.0.0-BETA.zip and copy that zip file into location "{ESB_CONNECTOR_HOME}/repository/".
 
- 4. Update the fhir properties file at location "<FHIR_CONNECTOR_HOME>/fhir-connector/fhir-connector-1.0.0/
+ 5. Update the fhir properties file at location "<FHIR_CONNECTOR_HOME>/fhir-connector/fhir-connector-1.0.0/
     org.wso2.carbon.connector/src/test/resources/artifacts/ESB/connector/config" as below.
 
    i)    base                       - The service root URL
@@ -54,5 +59,5 @@ Steps to follow in setting integration test.
    vi)   versionId                  - The version Id of the resource
    vii)  idForHistory               - The particular Id to retrieve the history
 
- 5. Navigate to "{ESB_CONNECTOR_HOME}/" and run the following command.
+ 6. Navigate to "{ESB_CONNECTOR_HOME}/" and run the following command.
       $ mvn clean install
