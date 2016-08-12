@@ -21,7 +21,7 @@
     <groupId>org.wso2.carbon.connector</groupId>
     <artifactId>org.wso2.carbon.connector.fhir</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1</version>
     <name>WSO2 Carbon - Mediation Library Connector For Fhir</name>
     <url>http://wso2.org</url>
     <properties>
@@ -135,7 +135,7 @@
         <connection>scm:git:https://github.com/wso2-extensions/esb-connector-fhir.git</connection>
         <url>https://github.com/wso2-extensions/esb-connector-fhir.git</url>
         <developerConnection>scm:git:https://github.com/wso2-extensions/esb-connector-fhir</developerConnection>
-        <tag>HEAD</tag>
+        <tag>org.wso2.carbon.connector.fhir-1.0.1</tag>
     </scm>
     <build>
         <plugins>
