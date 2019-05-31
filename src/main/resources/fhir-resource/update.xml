@@ -40,7 +40,7 @@
         <call>
             <endpoint>
                 <http method="Put"
-                      uri-template="{uri.var.base}/{uri.var.type}/{uri.var.idToUpdate}{+uri.var.format'}"/>
+                      uri-template="{uri.var.base}/{uri.var.type}/{uri.var.idToUpdate}{+uri.var.format}"/>
             </endpoint>
         </call>
     </sequence>
