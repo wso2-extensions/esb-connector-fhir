@@ -4,7 +4,7 @@
     "category": "Other",
     "documentationUrl": "https://ei.docs.wso2.com/en/latest/micro-integrator/references/connectors/fhir-connector/fhir-connector-overview/",
     "description": "FHIR is a Fast Healthcare Interoperability Resources (hl7.org/fhir) It is a next generation standards framework created by HL7. FHIR combines the best features of HL7's v2, HL7 v3 and CDA product lines while leveraging the latest web standards and applying a tight focus on implementability. This connector enables FHIR integration with WSO2 EI. ",
-    "status": "Active",
+    "status": "Inactive",
     "labels": [
         "healthcare"
     ],
